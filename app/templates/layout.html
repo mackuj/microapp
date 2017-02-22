@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link type="text/css" href="../static/style.css" rel="stylesheet">
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <div class="document">
+      <div class="docheader"> 
+        {% block header %}
+          <p>header</p>
+        {% endblock header %}   
+      </div>
+      <div class="docwrapper">
+        <div class="doccontent">
+          {% block content %} 
+            <h1>Content</h1>
+          {% endblock content %}
+        </div>
+      </div>
+      <div class="docsidebar">
+        {% block sidebar %}
+          <p>sidebar</p>
+        {% endblock sidebar %}
+      </div> 
+      <div class="cleaner"></div>
+      
+      <div class="docfooter">
+        {% block footer %}
+          <p>footer</p> 
+        {% endblock footer %}
+      </div> 
+    </div>
+  </body>
+</html>
+
+

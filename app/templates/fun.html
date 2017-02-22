@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+<html>
+{% block header %}
+  {{ super() }}
+{% endblock header %}
+{% block content %}
+  <div class="pictext">
+    {{ txt }} 
+  </div>
+  <div class="recnum">
+    Rozlišení: 
+    {% if res == "high" %} Velké
+    {% elif res == "low" %} Malé
+    {% else %} Nezadané
+    {% endif %}
+  </div> 
+  
+  <img src="/tmpjpg{{ funid }}/{{ res }}/{{ uloz }}{% if funid == 4 %}/{{ hodnot }}{% endif %}" width="705">
+{% endblock content %}
+{% block sidebar %}
+  <form action="/fun/{{ funid }}" method="POST">
+    <table>
+      {% for subfield in form.resol %}
+      <tr>
+        <td>{{ subfield.label }}</td>
+        <td>{{ subfield }}</td>
+      </tr>
+      {% endfor %}
+      {% if funid == 4 %}
+      <tr>
+        <td>{{ form.hodnot.label }}</td> 
+        <td>{{ form.hodnot(size="5", title="Zadejte desetinné číslo od 0 do 5 s desetinnou tečkou!") }}</td>
+      </tr>
+      {% endif %}
+      <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+      <tr>
+        <td>{{ form.uloz.label }}</td> 
+        <td>{{ form.uloz }}</td>
+      </tr> 
+    </table>
+    <input type="submit" value="Potvrdit">
+    {{ form.csrf_token }}
+  </form>
+{% endblock sidebar %}
+</html>

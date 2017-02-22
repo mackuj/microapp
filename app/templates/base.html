@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link type="text/css" href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" / >
+    <link type="text/css" href="{{ url_for('static', filename='script/SimplejQueryDropdowns/css/style.css') }}" rel="stylesheet"/ >
+    <script src="{{ url_for('static', filename='script/jquery-2.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='script/SimplejQueryDropdowns/js/jquery.dropdown.js') }}"></script>
+ 
+
+   <title>{{ title }}</title>
+  </head>
+  <body>
+    <div id="document">
+      <div id="docheader"> 
+        {% block header %}
+          <ul class="dropdown">
+            <li><a href="/fun/1">Snímání</a></li>
+            <li><a href="/fun/2">Stupně šedé</a></li>
+            <li><a href="/fun/3">Prahování</a></li>
+            <li><a href="/fun/4">Jas</a></li>
+            <!--li><a href="#">Nástroje</a>
+              <ul class="submenu">
+                <li><a href="/commstat">Komunikace</a></li>
+                <li><a href="/currdata">Akt. data</a></li>
+                <li><a href="#">Tool 3</a></li> 
+              </ul> 
+            </li-->
+          </ul>
+        {% endblock header %}   
+      </div>
+      <div id="docwrapper">
+        <div id="doccontent">
+          {% block content %} 
+            <h1>Digitální mikroskop</h1>
+          {% endblock content %}
+        </div>
+      </div>
+      <div id="docsidebar">
+        {% block sidebar %}
+          
+        {% endblock sidebar %}
+      </div> 
+      <div id="cleaner"></div>
+      
+      <div id="docfooter">
+        {% block footer %}
+          Micro 1.0 
+        {% endblock footer %}
+      </div> 
+    </div>
+  </body>
+</html>
+
+

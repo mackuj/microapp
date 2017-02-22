@@ -1,0 +1,116 @@
+/*    */
+#document {
+  margin: 30px auto 0;
+  width: 940px;
+}
+
+#docwrapper {
+  float: left;
+  width: 100%;
+}
+
+#docheader {
+  background-color: #777777;
+  color: #ffffff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  height: 28px;
+  border-radius: 3px;
+}
+
+
+#docsidebar {
+  font-size: 14px;
+  line-height: 1.5;
+  width: 210px;
+  height: 720px;
+  float: left;
+  margin-left: -100%;
+  background-color: #cccccc;
+  padding: 5px;
+}
+
+#doccontent {
+  margin: 0 0 0 220px;
+  height: 720px;
+  max-height: 720px;
+  overflow: auto;
+  padding: 5px;
+  background-color: #eeeeee;
+}
+
+#docfooter {
+  background-color: #777777;
+  color: #ffffff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+
+#cleaner {
+  clear:both; 
+}
+
+body {
+  /*background-color: #ffeeee;*/
+}
+
+table.data {
+    border: 2px solid lightgrey;
+    border-collapse: collapse;
+}
+
+th.data, td.data {
+    padding: 3px;
+    border: 1px solid lightgrey;
+    border-collapse: collapse; 
+} 
+
+td.num1 {
+    text-align: right;
+}
+
+tr.weekend {
+    background-color: #CDCDDC;
+}
+
+tr.ht {
+    background-color: #DCCDCD;
+}
+
+tr.lt {
+    background-color: #CDDCCD;
+}
+
+tr.ut {
+    background-color: #DCDCCD;
+}
+
+.smallnumframe {
+  width: 100px;
+}
+
+.smallnum {
+  position: relative;
+  text-align: right;
+  width: 16px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.bignum1 {
+  text-align: right;
+  font-size: 36pt;
+  font-weight: bold;
+}
+
+.pictext {
+  text-align: left;
+  font-size: 18pt;
+  font-weight: bold;
+}
